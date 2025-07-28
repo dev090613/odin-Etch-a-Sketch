@@ -1,0 +1,24 @@
+*, 
+*::before, 
+*::after {
+  box-sizing: border-box;
+}
+
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  border: solid 1px red;
+  width: 960px;
+  height: 960px;
+}
+
+.grid-item {
+  border: solid 1px blue;
+  width: 60px;
+  height: 60px;
+  margin: 0;
+}
+
+/* .grid-item:hover { */
+/*   background-color: crimson; */
+/* } */
