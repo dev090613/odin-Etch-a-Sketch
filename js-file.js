@@ -7,6 +7,9 @@ for (let i=0; i < gridSize * gridSize; i++) {
   container.appendChild(gridItem);
 };
 
-// container.addEventListener("click", (e) => {
-//   console.log(e.target)
-// })
+container.addEventListener("mouseover", (e) => {
+  const target = e.target.closest(".grid-item")
+  if (target) {
+    target.classList.add("grid-hovered")
+  }
+})

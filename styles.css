@@ -13,12 +13,13 @@
 }
 
 .grid-item {
-  border: solid 1px blue;
+  border: solid 1px green;
   width: 60px;
   height: 60px;
   margin: 0;
+  transition: background-color 0.5s;
 }
 
-/* .grid-item:hover { */
-/*   background-color: crimson; */
-/* } */
+.grid-hovered{
+  background-color: grey;
+}
