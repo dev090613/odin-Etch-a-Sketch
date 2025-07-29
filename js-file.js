@@ -3,11 +3,18 @@ const gridSize = 16
 const WIDTH = 960;
 const HEIGHT = 960;
 
+function createRGB() {
+  const r = Math.floor(Math.random() * (255 + 1))
+  const g = Math.floor(Math.random() * (255 + 1))
+  const b = Math.floor(Math.random() * (255 + 1))
+  const rgbColor =  `rgb(${r}, ${g}, ${b})`;
+  return rgbColor;
+}
+
 container.addEventListener("mouseover", (e) => {
   const target = e.target.closest(".grid-item")
   if (target) {
-    // console.log(target.style)
-    target.classList.add("grid-hovered")
+    target.style.backgroundColor = createRGB();
   }
 })
 
