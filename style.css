@@ -108,7 +108,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 7em;
+  gap: clamp(1rem, 4vw, 4rem);
 }
 
 .control-panel {
@@ -123,6 +123,13 @@ body {
 .sketchpad {
   border: 1px solid green;
   width: min(60%, 1200px);
+  aspect-ratio: 1 / 1;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item {
+  border: 1px solid black;
   aspect-ratio: 1 / 1;
 }
 
@@ -143,4 +150,3 @@ body {
   border: 1px solid pink;
   min-height: 50px;
 }
-

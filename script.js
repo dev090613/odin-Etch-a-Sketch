@@ -1,13 +1,14 @@
 let num = 16;
-const container = document.querySelector(".container")
+const container = document.querySelector(".sketchpad")
 
 for (let i = 0; i < num; i++) {
   for (let j = 0; j < num; j++) {
-    const div = document.createElement("div")
-    div.style.minWidth = (`calc(100vw / ${num})`)
+    const newDiv = document.createElement("div")
+    // newDiv.style.minWidth = (`calc(100vw / ${num})`)
+    newDiv.classList.add("item")
+    newDiv.style.width = `${100 / num}%`;
 
-    div.classList.add("item")
-    container.appendChild(div)
+    container.appendChild(newDiv)
   }
 }
 
