@@ -1,0 +1,18 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --base-width: 100vw;
+  /* --base-height: 100vh; */
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item {
+  flex: 1;
+  background-color: lightslategrey;
+}
