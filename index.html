@@ -9,20 +9,24 @@
   </head>
   <body>
     <header class="header">
-      <h1 class="title">Etch-a-Sketch</h1>
+      <h1 class="title shadow-basic">Etch-a-Sketch</h1>
     </header>
     <main class="main">
-      <div class="control-panel">
+      <div class="control-panel shadow-colored">
+        <input id="colorPicker" type="color">
         <button class="btn" data-mode="color">Color mode</button>
         <button class="btn" data-mode="rainbow">Rainbow mode</button>
         <button class="btn" data-mode="eraser">Eraser</button>
         <button class="btn" data-mode="clear">Clear</button>
+        <div class="slider-value">16 X 16</div>
+        <input type="range" id="sizeSlider" min="1" max="64" value="16">
       </div>
-      <div class="sketchpad">
+      <div class="sketchpad shadow-colored">
       </div>
     </main>
     <footer class="footer">
-      
+      <div class="github">Github Address: ...</div>
+      <div class="email">Email: ...</div>
     </footer>
   </body>
 </html>
