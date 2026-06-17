@@ -1,7 +1,7 @@
 const container = document.querySelector(".sketchpad")
 let currentMode = 'color';
 let currentColor = "#454545";
-let currentBackgroundColor = '#333'
+let currentBackgroundColor = '#ededed'
 let num = 16;
 
 const slider = document.querySelector("#sizeSlider")
@@ -28,10 +28,15 @@ slider.addEventListener("input", (e) => {
 let btns = [...document.querySelectorAll('.btn')];
 btns.forEach( (btn) => {
   btn.addEventListener('click', (e) => {
+    // console.log(e.target.style)
+    btns.forEach( (btn) => btn.style.backgroundColor = "#ededed" )
     if (e.target.dataset["mode"] === "clear") {
       drawItems(num);
+      e.target.style.backgroundColor = "skyblue"
+      currentMode = 'eraser';
     } else {
       currentMode = e.target.dataset["mode"]
+      e.target.style.backgroundColor = "skyblue"
     }
   })
 })

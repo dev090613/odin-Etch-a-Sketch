@@ -34,7 +34,6 @@ ol[role='list'] {
 
 /* Set core body defaults */
 body {
-  min-height: 100vh;
   line-height: 1.5;
   background-color: #ededed;
 }
@@ -96,17 +95,20 @@ body {
   flex-direction: column;
   justify-content: space-between;
   /* align-items: center; */
+  min-height: 100vh;
+  /* overflow: hidden; */
 }
 
 .title {
   text-align: center;
   font-size: clamp(2rem, 5vw + 1rem, 4.5rem);
   padding: 0.55em 1.5em;
+  margin-top: 0;
 }
 
 .main {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
   gap: clamp(1rem, 4vw, 4rem);
@@ -114,9 +116,9 @@ body {
 }
 
 .control-panel {
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
   min-width: 300px;
-  max-height: min(40%, 600px);
+  max-height: min(50%, 600px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -134,7 +136,7 @@ body {
 
 .sketchpad {
   background-color: white;
-  border: 1px solid green;
+  /* border: 1px solid green; */
   width: min(40%, 800px);
   aspect-ratio: 1 / 1;
   display: flex;
@@ -142,12 +144,12 @@ body {
 }
 
 .item {
-  border: 1px solid black;
+  /* border: 1px solid black; */
   aspect-ratio: 1 / 1;
 }
 
 .btn {
-  width: 200px;
+  width: 80%;
   margin: 0.7em;
 
   --scale: 1;
@@ -164,5 +166,34 @@ body {
 
 .footer {
   border: 1px solid pink;
-  min-height: 50px;
+  height: 6vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.5em;
 }
+
+#colorPicker {
+  appearance: none;         /* 브라우저 기본 UI 스타일 제거 */
+  width: calc(3em + 1vw);
+  height: calc(3em + 1vw);
+  border-radius: 60%;
+  overflow: hidden;
+  border: none;             
+}
+
+/* 1. 웹킷 브라우저의 기본 UI 스타일 강제 해제 */
+#colorPicker {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+/* 2. 내부 숨겨진 알맹이 상자들도 함께 50%로 깎아주기 */
+#colorPicker::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+#colorPicker::-webkit-color-swatch {
+  border: none;
+  border-radius: 50%;
+}
+
